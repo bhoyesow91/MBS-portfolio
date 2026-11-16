@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-padding-top: 85px;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #ffffff;
+  color: #172033;
+}

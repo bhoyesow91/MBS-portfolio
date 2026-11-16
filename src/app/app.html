@@ -1,0 +1,148 @@
+
+<header class="navbar">
+  
+
+  <nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#apropos">À propos</a>
+    <a href="#competences">Compétences</a>
+    <a href="#projets">Projets</a>
+    <a href="#formation">Formation</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <a href="#contact" class="nav-button">Me contacter</a>
+</header>
+
+<main>
+
+  <section class="hero" id="accueil">
+    <div class="hero-content">
+      <p class="welcome">BIENVENUE SUR MON PORTFOLIO</p>
+
+      <h1>Bonjour, je suis <span>{{ nom }}</span></h1>
+
+      <h2>{{ profession }}</h2>
+
+      <p class="hero-description">
+        {{ description }}
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#projets" class="btn-primary">Découvrir mes projets</a>
+        <a href="#contact" class="btn-outline">Me contacter</a>
+      </div>
+
+      <div class="social-text">
+        Passionné par le développement et l'innovation numérique.
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="profile-circle">
+          <img src="/BOSS.jpg" alt="Ma photo">
+      </div>
+    </div>
+  </section>
+
+  <section class="section about" id="apropos">
+    <div class="section-heading">
+      <p>QUI SUIS-JE ?</p>
+      <h2>À propos de <span>moi</span></h2>
+    </div>
+
+    <div class="about-content">
+      <div class="about-icon">MBS</div>
+
+      <div>
+        <h3>Un passionné du numérique</h3>
+        <p>
+          Je suis {{ nom }}, étudiant en Licence 4 au département
+          MIAGE de l'Université Barack Obama de Sonfonia,
+          dans la filière Programmation et Développement Web.
+        </p>
+        <p>
+          Je m'intéresse particulièrement à la programmation,
+          à la conception d'applications et aux nouvelles
+          technologies. Mon ambition est de devenir un
+          développeur compétent et de participer à la
+          transformation numérique.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section skills" id="competences">
+    <div class="section-heading">
+      <p>MON SAVOIR-FAIRE</p>
+      <h2>Mes <span>compétences</span></h2>
+    </div>
+
+    <div class="skills-grid">
+      @for (competence of competences; track competence) {
+        <div class="skill-card">
+          <span class="skill-dot"></span>
+          {{ competence }}
+        </div>
+      }
+    </div>
+  </section>
+
+  <section class="section projects" id="projets">
+    <div class="section-heading">
+      <p>MES RÉALISATIONS</p>
+      <h2>Mes <span>projets</span></h2>
+    </div>
+
+    <div class="projects-grid">
+      @for (projet of projets; track projet.nom) {
+        <article class="project-card">
+          <div class="project-icon">⌘</div>
+          <p class="project-category">{{ projet.categorie }}</p>
+          <h3>{{ projet.nom }}</h3>
+          <p>{{ projet.description }}</p>
+          <a href="#contact">En savoir plus →</a>
+        </article>
+      }
+    </div>
+  </section>
+
+  <section class="section education" id="formation">
+    <div class="section-heading">
+      <p>MON PARCOURS</p>
+      <h2>Formation <span>académique</span></h2>
+    </div>
+
+    <div class="education-card">
+      <div class="education-year">En cours</div>
+      <div>
+        <h3>Licence 4 — MIAGE</h3>
+        <p>Programmation et Développement Web</p>
+        <p>Université Barack Obama de Sonfonia</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="section-heading">
+      <p>RESTONS EN CONTACT</p>
+      <h2>Travaillons <span>ensemble</span></h2>
+    </div>
+
+    <p class="contact-description">
+      Vous avez un projet, une opportunité ou simplement
+      envie d'échanger ? N'hésitez pas à me contacter.
+    </p>
+
+    <a href="mailto:bhoyesow91811@gmail.com" class="btn-primary">
+      M'envoyer un email
+    </a>
+  </section>
+
+</main>
+
+<footer>
+  <a href="#accueil" class="logo">MBS<span>.</span></a>
+  <p>© {{ annee }} {{ nom }}. Tous droits réservés.</p>
+  <a href="#accueil">Retour en haut ↑</a>
+</footer>
